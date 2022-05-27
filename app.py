@@ -52,13 +52,9 @@ def pagelist():
 @app.route('/cms', methods=['GET'])
 def cmd_index():
     # read main.txt file
-    konten = listdir("pages")
-    judu = []
-    for i in konten:
-        f = open(os.path.join(os.getcwd(), i), 'r')
-        judu = judul(f)
-
-    return render_template('list.html', konten=judu)
+    #judu = []
+    l = listdir('pages')
+    return render_template('list.html', konten=l)
 
 
 
