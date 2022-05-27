@@ -44,19 +44,12 @@ def pagelist():
         yield url_for('page', path=page.path)
 
 
-
-
-
-
-
 @app.route('/cms', methods=['GET'])
 def cmd_index():
     # read main.txt file
     #judu = []
     l = listdir('pages')
     return render_template('list.html', konten=l)
-
-
 
 
 
