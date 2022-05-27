@@ -1,0 +1,17 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}Simple CMS{% endblock %}
+
+{% block content %}
+
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action active">
+    Cras justo odio
+  </a>
+  {% for i in konten %}
+  <a href="#" class="list-group-item list-group-item-action">{{i}}</a>
+  {% endfor %}
+</div>
+
+
+
+{% endblock %}

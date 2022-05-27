@@ -7,6 +7,8 @@ from flask import Flask, render_template, url_for
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
 
+from flask import Flask, render_template
+from flask_bootstrap import Bootstrap
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
@@ -16,11 +18,17 @@ app.config.from_object(__name__)
 pages = FlatPages(app)
 freezer = Freezer(app)
 
-
+Bootstrap(app)
 
 @app.route('/')
 def index():
     return render_template('home.html', pages=pages)
+
+
+
+@app.route('/admin')
+def admin():
+    return "halo"
 
 
 
@@ -34,6 +42,40 @@ def page(path):
 def pagelist():
     for page in pages:
         yield url_for('page', path=page.path)
+
+
+
+
+
+
+
+@app.route('/cms', methods=['GET'])
+def cmd_index():
+    # read main.txt file
+    konten = listdir("pages")
+    judu = []
+    for i in konten:
+        f = open(os.path.join(os.getcwd(), i), 'r')
+        judu = judul(f)
+
+    return render_template('list.html', konten=judu)
+
+
+
+
+
+
+@app.route('/cms/<path:nama>', methods=['GET'])
+def cmd_form(nama):
+    # read main.txt file
+    isi = open(nama, "r")
+    baca = isi.read()
+    judu = judul(nama)
+    tg = tgl(nama)
+    return render_template('cms.html', judul=judu, isi=baca, tgl=tg)
+
+
+
 
 
 
