@@ -44,12 +44,9 @@ def pagelist():
         yield url_for('page', path=page.path)
 
 
-@app.route('/cms', methods=['GET'])
-def cmd_index():
-    # read main.txt file
-    #judu = []
-    l = listdir('pages')
-    return render_template('list.html', konten=l)
+@app.route('/cms')
+def cms_index():
+    return render_template('list.html', pages=pages)
 
 
 
@@ -60,8 +57,9 @@ def cmd_form(nama):
     isi = open(nama, "r")
     baca = isi.read()
     judu = judul(nama)
+    kon = konten(nama)
     tg = tgl(nama)
-    return render_template('cms.html', judul=judu, isi=baca, tgl=tg)
+    return render_template('cms.html', judul=judu, isi=kon, tgl=tg, pages=pages)
 
 
 

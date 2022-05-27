@@ -1,139 +1,103 @@
-<style type="text/css">
-  /* tinggi card */
-.post-body {
-    height: 215px;
-    position: relative;
-    padding: 20px 15px 0;
-}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
-/* untuk menghilangkan padding pada .panel-heading */
-.post-thumb {
-    padding: 0
-}
+    <!-- bootstrap -->
 
-/* mengatur font dan link judul artikel*/
-.post-title a {
-    color: rgba(0,0,0,0.7);
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.5em;
-    letter-spacing: 0.01rem;
-}
-.post-title a:hover { text-decoration: none }
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
 
-/* posisi author selalu di bawah */
-.post-author {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
-    font-size: 13px;
-}
+    <!-- css -->
 
-.post-author .author-photo {
-    margin-right: 10px;
-    border-radius: 50%;
-}
-</style>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Nunito:wght@600&display=swap");
 
-<div class="container">
-    <div class="row">
+      * {
+        font-family: "Nunito", sans-serif;
+      }
 
-        <div class="col-md-3">
-            <!-- komponen panel di sini  -->
-            <div class="panel panel-default">
+      body {
+        background-color:rgb(255,255,255);
+      }
 
-    <div class="panel-heading post-thumb">
-        <img class="img img-responsive" src="https://1.bp.blogspot.com/-Si2mC34KXNA/WMbVnxfxN5I/AAAAAAAAEXE/GJGrexSZzQM33kfA_SvaoTczsZkAyilmACK4B/s1600/ubuntu-1704-default-wallpaper.jpg" />
-    </div>
+      .bgNavbar {
+        background-color: rgba(255,255,255,0.86) ;
+      }
 
-    <div class="panel-body post-body">
-        <a class="label label-default" href="#">Label</a>
-            <h3 class="post-title">
-            <a href="#">Judul Artikel yang Sangat Bagus</a>
-            </h3>
+      .navbar-nav li a {
+        font-size: 22px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- navbar -->
 
-            <div class="post-author">
-                <img class="author-photo" height="32" src="https://3.bp.blogspot.com/-Reoz1l_Q0RE/WKuilfzo8JI/AAAAAAAAEGY/Kg3cJZ6qE4g8FH1E35svGLmzGEjRHpMsACPcB/s100/pp-hitamputih-02-2017.jpg" width="32">
-                <a href="https://twitter.com/ardiantapargo">Ardianta Pargo</a>
-            </div>
-        
-    </div>
-
-</div>
+      <nav class="navbar navbar-expand-lg bgNavbar shadow">
+        <div class="container">
+          <!-- <a class="navbar-brand text-white" href="#">Navbar</a> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Tutorial</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Form</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Book</a>
+              </li>
+            </ul>
+          </div>
         </div>
+      </nav>
 
-        <div class="col-md-3">
-            <!-- komponen panel di sini  -->
-            <div class="panel panel-default">
+      <!-- end Navbar -->
+      <!-- content -->
 
-    <div class="panel-heading post-thumb">
-        <img class="img img-responsive" src="https://1.bp.blogspot.com/-Si2mC34KXNA/WMbVnxfxN5I/AAAAAAAAEXE/GJGrexSZzQM33kfA_SvaoTczsZkAyilmACK4B/s1600/ubuntu-1704-default-wallpaper.jpg" />
-    </div>
-
-    <div class="panel-body post-body">
-        <a class="label label-default" href="#">Label</a>
-            <h3 class="post-title">
-            <a href="#">Judul Artikel yang Sangat Bagus</a>
-            </h3>
-
-            <div class="post-author">
-                <img class="author-photo" height="32" src="https://3.bp.blogspot.com/-Reoz1l_Q0RE/WKuilfzo8JI/AAAAAAAAEGY/Kg3cJZ6qE4g8FH1E35svGLmzGEjRHpMsACPcB/s100/pp-hitamputih-02-2017.jpg" width="32">
-                <a href="https://twitter.com/ardiantapargo">Ardianta Pargo</a>
-            </div>
+      <div class="container py-5">
         
-    </div>
-
-</div>
+        <div class="row py-5 px-3 justify-content-center">
+          <div class="col-md-3 shadow p-3 m-2">
+            <h2>judul</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt,
+              eaque ducimus eius dolorem consequuntur sunt minus quisquam non
+              praesentium. Hic..
+            </p>
+          </div>
         </div>
+      </div>
+  
 
-        <div class="col-md-3">
-            <!-- komponen panel di sini  -->
-            <div class="panel panel-default">
-
-    <div class="panel-heading post-thumb">
-        <img class="img img-responsive" src="https://1.bp.blogspot.com/-Si2mC34KXNA/WMbVnxfxN5I/AAAAAAAAEXE/GJGrexSZzQM33kfA_SvaoTczsZkAyilmACK4B/s1600/ubuntu-1704-default-wallpaper.jpg" />
-    </div>
-
-    <div class="panel-body post-body">
-        <a class="label label-default" href="#">Label</a>
-            <h3 class="post-title">
-            <a href="#">Judul Artikel yang Sangat Bagus</a>
-            </h3>
-
-            <div class="post-author">
-                <img class="author-photo" height="32" src="https://3.bp.blogspot.com/-Reoz1l_Q0RE/WKuilfzo8JI/AAAAAAAAEGY/Kg3cJZ6qE4g8FH1E35svGLmzGEjRHpMsACPcB/s100/pp-hitamputih-02-2017.jpg" width="32">
-                <a href="https://twitter.com/ardiantapargo">Ardianta Pargo</a>
-            </div>
-        
-    </div>
-
-</div>
-        </div>
-
-        <div class="col-md-3">
-            <!-- komponen panel di sini  -->
-            <div class="panel panel-default">
-
-    <div class="panel-heading post-thumb">
-        <img class="img img-responsive" src="https://1.bp.blogspot.com/-Si2mC34KXNA/WMbVnxfxN5I/AAAAAAAAEXE/GJGrexSZzQM33kfA_SvaoTczsZkAyilmACK4B/s1600/ubuntu-1704-default-wallpaper.jpg" />
-    </div>
-
-    <div class="panel-body post-body">
-        <a class="label label-default" href="#">Label</a>
-            <h3 class="post-title">
-            <a href="#">Judul Artikel yang Sangat Bagus</a>
-            </h3>
-
-            <div class="post-author">
-                <img class="author-photo" height="32" src="https://3.bp.blogspot.com/-Reoz1l_Q0RE/WKuilfzo8JI/AAAAAAAAEGY/Kg3cJZ6qE4g8FH1E35svGLmzGEjRHpMsACPcB/s100/pp-hitamputih-02-2017.jpg" width="32">
-                <a href="https://twitter.com/ardiantapargo">Ardianta Pargo</a>
-            </div>
-        
-    </div>
-
-</div>
-        </div>
-
-    </div>
-</div>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

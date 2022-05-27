@@ -15,3 +15,10 @@ def tgl(file):
     return t
 
 
+def konten(file):
+    f = open(file, "r")
+    isi = f.readlines()
+    kn = isi[4:]
+    return kn
+
+

@@ -11,11 +11,14 @@
 <div class="container">
   <form method="POST">
     <div class="form-group">
+      {% for page in pages %}
       <h4>Title</h4>
-      <input type="text" class="form-control" name="title" value="{{ judul }}">
-
+      <input type="text" class="form-control" name="title" value="{{ page.title }}">
       <h4>Date:</h4>
-      <input type="text" class="form-control" name="date" value="{{ tgl }}">
+      <input type="text" class="form-control" name="date" value="{{ page.date }}">
+      <h4>images:</h4>
+      <input type="text" class="form-control" name="title" value="{{ page.img }}">
+      {% endfor %}
 
     </div>
     <h4> post:</h4>

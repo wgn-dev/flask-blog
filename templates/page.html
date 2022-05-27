@@ -2,9 +2,21 @@
 
 {% block content %}
 
-<h1> {{ page.title }} </h1>
-<small> Published on {{ page.date.strftime('%A, %d %B, %Y') }} </small>
+      <div class="container py-2">
+
+        <div class="row py-2 px-3 justify-content-center">
+          <div class="col-md-3 shadow p-3 m-2">
+        <h2><span class="border-bottom">{{ page.title }}</span></h2>
+        <img src="{{ page.img }}" class="card-img-top" alt="...">
+        <small> Published on {{ page.date.strftime('%A, %d %B, %Y') }} </small>
 <br>
-{{ page.html|safe }}
+<p></p>
+
+            <p>{{ page.html|safe}}</p>
+            </a>
+
+          </div>
+       </div>
+      </div>
 
 {% endblock %}
