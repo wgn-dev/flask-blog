@@ -49,21 +49,15 @@ def cms_index():
     return render_template('list.html', pages=pages)
 
 
-
-
 @app.route('/cms/<path:nama>', methods=['GET'])
 def cmd_form(nama):
     # read main.txt file
-    isi = open(nama, "r")
-    baca = isi.read()
-    judu = judul(nama)
+    #isi = open(nama, "r")
+    #baca = isi.read()
+    #judu = judul(nama)
     kon = konten(nama)
-    tg = tgl(nama)
-    return render_template('cms.html', judul=judu, isi=kon, tgl=tg, pages=pages)
-
-
-
-
+    #tg = tgl(nama)
+    return render_template('cms.html', pages=pages, konten=kon)
 
 
 @app.route('/edit/<path:nama>', methods=['GET'])
