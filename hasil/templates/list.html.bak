@@ -1,0 +1,21 @@
+{% block title %}Simple CMS{% endblock %}
+
+{% block content %}
+
+<div class="list-group">
+	<a href="#">Buat Postingan Baru</a></br>
+	<a href="#" class="list-group-item list-group-item-action active">
+	List post : 
+	</a>
+	<table class="tabel-post-list">
+	{% for i in konten %}
+		<tr>
+			<td> {{ i }}</td>	
+			<td><a href="cms/{{i}}" class="list-group-item list-group-item-action">Edit</a></td>
+			<td><a href="hapus/{{i)}}">Hapus</a></td>
+		</tr
+	{% endfor %}
+	</table>
+</div>
+
+{% endblock %}
